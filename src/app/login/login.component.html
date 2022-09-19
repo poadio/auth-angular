@@ -1,3 +1,41 @@
-<a class="btn btn-block btn-social btn-adn">
-    <span class="fa fa-adn"></span> Sign in with App.net
-</a>
+<div class="header">
+    <h1>Login</h1>
+    <br />
+    <form class="ui form">
+        <div class="field">
+            <label>E-Mail</label>
+            <input type="email" name="E-Mail" placeholder="E-Mail">
+        </div>
+        <div class="field hidden">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+    </form>
+    <div class="button-group">
+        <button (click)="signInWithPassword()" class="ui button">
+            Sign in with password
+        </button>
+        <button class="ui button">
+            Sign in with magic link
+        </button>
+    </div>
+    <hr />
+    <div class="social-group">
+        <button class="btn ui facebook button">
+            <i class="facebook icon"></i>
+            sign in with Facebook
+        </button><br>
+        <button class="btn ui twitter button">
+            <i class="twitter icon"></i>
+            sign in with Twitter
+        </button><br>
+        <button class="btn ui google plus button">
+            <i class="google plus icon"></i>
+            sign in with Google
+        </button><br>
+        <button class="btn ui github button">
+            <i class="github icon"></i>
+            sign in with Github
+        </button>
+    </div>
+</div>
