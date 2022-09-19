@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Renderer2,
+  ViewChildren,
+  QueryList,
+  ElementRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -6,7 +13,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  @ViewChildren('password') password: QueryList<ElementRef<HTMLElement>>;
+  constructor(private _renderer: Renderer2) {}
 
   ngOnInit(): void {}
 
