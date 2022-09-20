@@ -17,6 +17,6 @@ export class ProfileComponent implements OnInit {
   }
   async logout() {
     await this.auth.signOut();
-    location.href = '/';
+    window.location.href = '/';
   }
 }
