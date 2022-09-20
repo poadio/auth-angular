@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     var p = this;
     this.auth.authChanges(function (_, session) {
       p.session = session;
-      p.user = session?.user;
+      p.user = session.user;
     });
   }
 

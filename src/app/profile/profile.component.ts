@@ -12,8 +12,8 @@ export class ProfileComponent implements OnInit {
   session: any = {};
   user: String = '';
   ngOnInit(): void {
-    this.session = this.auth?.session;
-    this.user = this.session?.user?.email;
+    this.session = this.auth.session;
+    this.user = this.session.user.email;
   }
   async logout() {
     await this.auth.signOut();
