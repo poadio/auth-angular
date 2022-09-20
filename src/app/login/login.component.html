@@ -4,36 +4,36 @@
     <form class="ui form">
         <div class="field">
             <label>E-Mail</label>
-            <input type="email" name="E-Mail" placeholder="E-Mail">
+            <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="email" #ctrl="ngModel" placeholder="E-Mail">
         </div>
-        <div #password class="field hidden">
+        <div #display_password class="field hidden">
             <label>Password</label>
-            <input type="password" name="password" placeholder="Password">
+            <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" #ctrl="ngModel" placeholder="Password">
         </div>
     </form>
     <div class="button-group">
         <button (click)="signInWithPassword()" class="ui button">
             Sign in with password
         </button>
-        <button class="ui button">
+        <button (click)="signInWithMagicLink()" class="ui button">
             Sign in with magic link
         </button>
     </div>
     <hr />
     <div class="social-group">
-        <button class="btn ui facebook button">
+        <button (click)="signInWithFacebook()" class="btn ui facebook button">
             <i class="facebook icon"></i>
             sign in with Facebook
         </button><br>
-        <button class="btn ui twitter button">
+        <button (click)="signInWithTwitter()" class="btn ui twitter button">
             <i class="twitter icon"></i>
             sign in with Twitter
         </button><br>
-        <button class="btn ui google plus button">
+        <button (click)="signInWithGoogle()" class="btn ui google plus button">
             <i class="google plus icon"></i>
             sign in with Google
         </button><br>
-        <button class="btn ui github button">
+        <button (click)="signInWithGithub()" class="btn ui github button">
             <i class="github icon"></i>
             sign in with Github
         </button>

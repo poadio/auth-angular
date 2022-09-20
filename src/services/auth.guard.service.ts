@@ -8,7 +8,6 @@ export class AuthGuardService implements CanActivate {
   constructor(private readonly auth: Auth, public router: Router) {}
 
   canActivate(): boolean {
-    console.log(this.session);
     if (!this.session) {
       this.router.navigate(['login']);
       return false;

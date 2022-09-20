@@ -24,15 +24,14 @@ export class Auth {
     return this.omneedia.auth.session();
   }
 
-  authChanges(
+  public authChanges(
     callback: (event: AuthChangeEvent, session: Session | null) => void
   ) {
-    console.log(this.session);
     return this.omneedia.auth.onAuthStateChange(callback);
   }
 
-  signIn(email: string) {
-    return this.omneedia.auth.signIn({ email });
+  signIn(email: string, password: string) {
+    return this.omneedia.auth.signIn({ email, password });
   }
 
   signInWithMagicLink(email: string) {
