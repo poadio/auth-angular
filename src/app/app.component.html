@@ -1,15 +1,16 @@
 <section class="top-nav">
-    <div>
-        MyApp
-    </div>
-    <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-        <div class='menu-button'></div>
-    </label>
-    <ul class="menu">
-        <li *ngIf="user.email===undefined" (click)="login()">Login</li>
-        <li *ngIf="user.email===undefined" (click)="signup()">Sign Up</li>
-        <li *ngIf="user.email!==undefined" (click)="go2profile()">{{user.email}}</li>
-    </ul>
+  <div>
+    MyApp
+  </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class="menu-button-container" for="menu-toggle">
+    <div class="menu-button"></div>
+  </label>
+  <ul class="menu">
+    <li *ngIf="user.email===undefined" (click)="login()">Login</li>
+    <li *ngIf="user.email!==undefined" (click)="go2profile()">
+      {{user.email}}
+    </li>
+  </ul>
 </section>
 <router-outlet></router-outlet>

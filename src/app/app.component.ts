@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Auth } from '../services/auth.service';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Auth } from "../services/auth.service";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  title = 'auth';
+  title = "auth";
   constructor(private router: Router, private readonly auth: Auth) {}
   user: any = {};
   session: any = {};
@@ -21,14 +21,10 @@ export class AppComponent implements OnInit {
   }
 
   login() {
-    this.router.navigate(['/', 'login']);
-  }
-
-  signup() {
-    this.router.navigate(['/', 'signup']);
+    window.location.href = "/login";
   }
 
   go2profile() {
-    this.router.navigate(['/', 'profile']);
+    window.location.href = "/profile";
   }
 }

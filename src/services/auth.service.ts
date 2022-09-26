@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import {
   AuthChangeEvent,
   createClient,
   Session,
-  OmneediaClient,
-} from '@omneedia/client-js';
-import { environment } from '../environments/environment';
+  OmneediaClient
+} from "@omneedia/client-js";
+import { environment } from "../environments/environment";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root"
 })
 export class Auth {
   private omneedia: OmneediaClient;
@@ -36,6 +36,22 @@ export class Auth {
 
   signInWithMagicLink(email: string) {
     return this.omneedia.auth.signIn({ email });
+  }
+
+  signInWithFacebook() {
+    return this.omneedia.auth.signIn({ provider: "facebook" });
+  }
+
+  signInWithTwitter() {
+    return this.omneedia.auth.signIn({ provider: "twitter" });
+  }
+
+  signInWithGoogle() {
+    return this.omneedia.auth.signIn({ provider: "google" });
+  }
+
+  signInWithGithub() {
+    return this.omneedia.auth.signIn({ provider: "github" });
   }
 
   signOut() {
